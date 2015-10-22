@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 # create a dataFrame from csv table
-table = pd.read_table('data/postcodes.csv', delimiter = ',', encoding = 'utf-8')
+table = pd.read_table('../data/postcodes.csv', delimiter = ',', encoding = 'utf-8')
 
 
 # calling a Series from a pandas dataFrame you can turn it into a list by .tolist()
@@ -34,5 +34,5 @@ for postcode in table['postcode'].tolist():
 # it writes to a new csv file with coordinates
 
 
-table.to_csv('data/postcodes_final.csv', separator=',',header = True, index = False, mode = 'wb', encoding = 'utf-8')
+table.to_csv('../data/postcodes_final.csv', separator=',',header = True, index = False, mode = 'wb', encoding = 'utf-8')
 
