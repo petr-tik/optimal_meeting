@@ -10,7 +10,7 @@ import pandas as pd
 
 def define_search_space():
 
-	coordinates = pd.read_table('data/postcodes_final.csv', delimiter = ',', encoding = 'utf-8')
+	coordinates = pd.read_table('../data/postcodes_final.csv', delimiter = ',', encoding = 'utf-8')
 	needed_columns = ['longitude', 'latitude']
 	# create a dictionary where different values will be stored
 	space_parameters = []
