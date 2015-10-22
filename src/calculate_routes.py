@@ -7,7 +7,7 @@ import requests
 import numpy as np
 
 
-table = pd.read_table('data/postcodes_final.csv', sep = ',', encoding = 'utf-8', index_col = 0)
+table = pd.read_table('../data/postcodes_final.csv', sep = ',', encoding = 'utf-8', index_col = 0)
 
 # only consider valid coordinate values
 table = table.dropna()
