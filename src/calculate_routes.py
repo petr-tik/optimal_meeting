@@ -64,8 +64,8 @@ def calc_travel(name, dest_lat, dest_long):
 		pass
 
 
-for long in myrange(parameters['longitude']['lower_bound'], parameters['longitude']['upper_bound'], parameters['longitude']['increment']):
-	for lat in myrange(parameters['latitude']['lower_bound'], parameters['latitude']['upper_bound'], parameters['latitude']['increment']):
+for longit in myrange(parameters['longitude']['lower_bound'], parameters['longitude']['upper_bound'], parameters['longitude']['increment']):
+	for latit in myrange(parameters['latitude']['lower_bound'], parameters['latitude']['upper_bound'], parameters['latitude']['increment']):
 		for name in names_list: 
-			res = calc_travel(name, lat, long)
+			res = calc_travel(name, latit, longit)
 			
