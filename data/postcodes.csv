@@ -1,8 +1,6 @@
-name,postcode,longitude,latitude
-lad,w93pe,,
-bob,sw56pb,,
-vas,ec1m 4df,,
-fdas,w93px,,
-weq,w93pe,,
-ed,sw74nn,,
-ana,E145EP,,
+name,postcode_start,postcode_finish,longitude,latitude
+lad,w93pe,sw139nl,,
+bob,w1j 6np,sw56pb,,
+vas,wc2b 5ll,ec1m 4df,,
+ed,ec4v3rl,sw74nn,,
+ana,E145EP,nw6 3ry,,

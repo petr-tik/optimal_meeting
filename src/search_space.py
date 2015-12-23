@@ -8,13 +8,30 @@ import pandas as pd
 # load the dataframe and extract longitude and latitude
 
 
-def define_search_space():
-
-	coordinates = pd.read_table('../data/postcodes_final.csv', delimiter = ',', encoding = 'utf-8')
-	needed_columns = ['longitude', 'latitude']
-	# create a dictionary where different values will be stored
-	space_parameters = []
+class SearchSpace():
+    """ define the search space class, which will call data from the table, 
+        collect all longitudes and latitudes
+        make a recangular search space
+        increment
+    """
+    def __init__(self, table, longitudes, latitudes) 
+	    self.coordinates = pd.read_table('data/postcodes_final.csv', 
+                                            delimiter = ',', encoding = 'utf-8')
+        self.needed_columns = ['longitude', 'latitude']
+	    # create a dictionary where different values will be stored
+        self.longitudes = self.coordinates['longitude'].tolist()
+        self.latitudes = self.coordinates['latitude'].tolist()	    
 	
+
+    def parameters(self, increment):
+        
+    
+
+
+
+
+
+
 	# iterate over 2 relevant columns
 	for column_name in needed_columns:
 		column_name = dict()
@@ -30,5 +47,3 @@ def define_search_space():
 	return space_parameters
 # the search space is the rectangle between lower quartile latitude/longitude and upper quarter latitude/longitude
 
-list = define_search_space()
-print list
