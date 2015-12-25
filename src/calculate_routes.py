@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding=utf-8 -*-
 
 
@@ -27,7 +28,17 @@ def myrange(a, b, c):
 	  
 # take name, look up the respective coordinates, pass them into tfl api
 
-def calc_travel(name, dest_lat, dest_long):
+def calc_travel(name):
+"""
+
+Args:
+name: name of traveller, used to look their postcodes up
+
+Returns:
+Parsed JSON object
+
+"""
+
 	# .loc allows you to select data based on row and column labels, .tolist() turns the selection into a list
 	departure = table.loc[name, ['latitude', 'longitude']].tolist()
 	destination = [dest_lat, dest_long]
@@ -69,3 +80,44 @@ for longit in myrange(parameters['longitude']['lower_bound'], parameters['longit
 		for name in names_list: 
 			res = calc_travel(name, latit, longit)
 			
+class Engine_chooser(object):
+	def __init__(self, ):
+		pass
+
+class Tfl_calc(object):
+	def __init__(self, self.mode, ):
+		pass
+
+class
+
+
+class 
+
+
+class Event(object):
+"""
+Creates an object for every event and populates it with necessary info:
+
+Args: 
+id: group id as created by the system
+date_time: date and time of their meetup
+num_people: number of people in the group
+
+Retuns:
+	These values when called. 
+
+"""
+
+	def __init__(self, id, date_time, num_people):
+		self.id = # taken from the group page
+		self.date_time = #taken from the group page
+		self.num_people = #taken from the group page
+
+	def id(self):
+		return Event.id
+
+	def date_time(self):
+		return Event.date_time
+
+	def num_people(self):
+		return self.num_people
