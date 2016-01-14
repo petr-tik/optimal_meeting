@@ -1,6 +1,6 @@
 
 
-[ ] write orthogonal objects
+[x] write orthogonal objects
 
 [ ] write tests for every module
 
