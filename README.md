@@ -27,7 +27,7 @@ Contribute
 ----------
 
 - Issue Tracker: https://github.com/petr-tik/optimal_meeting/issues
-- Source Code: https://github.com/petr-tik/optimal_meeting/src
+- Source Code: https://github.com/petr-tik/optimal_meeting/tree/master/src
 
 **please** add issues, fork and send me PRs! 
 
