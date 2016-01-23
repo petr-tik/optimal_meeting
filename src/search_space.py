@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding=utf-8 -*-
 
 import pandas as pd
@@ -14,7 +15,7 @@ class SearchSpace():
         make a recangular search space
         increment
     """
-    def __init__(self, table, longitudes, latitudes) 
+    def __init__(self, table, longitudes, latitudes):
 	    self.coordinates = pd.read_table('data/postcodes_final.csv', 
                                             delimiter = ',', encoding = 'utf-8')
         self.needed_columns = ['longitude', 'latitude']
@@ -24,12 +25,7 @@ class SearchSpace():
 	
 
     def parameters(self, increment):
-        
-    
-
-
-
-
+        pass
 
 
 	# iterate over 2 relevant columns

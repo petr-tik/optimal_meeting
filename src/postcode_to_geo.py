@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding=utf-8 -*-
 
 import requests
@@ -6,15 +7,13 @@ import matplotlib.pyplot as plt
 
 
 # create a dataFrame from csv table
-table = pd.read_table('../data/postcodes.csv', delimiter = ',', encoding = 'utf-8')
+table = pd.read_table('data/postcodes.csv', delimiter = ',', encoding = 'utf-8')
 
 # convert pandas Dataframe into a dictionary, where the row index is key
 # and value is another dict
 table_as_dict = table.to_dict(orient = 'index')
 
 df = pd.DataFrame.from_dict(table_as_dict)
-
-
 
 class Traveller(object):
     """ A traveller whose route has to be taken into account
@@ -28,8 +27,8 @@ class Traveller(object):
 
         """
 
-    def __init__(self, start_postcode, finish_postcode, mode, 
-                                       start_coor, finish_coor):
+    def __init__(self, name):
+    
         self.start_postcode = start_postcode
         self.finish_postcode = finish_postcode
         self.mode = mode
@@ -37,18 +36,22 @@ class Traveller(object):
         self.finish_coor = []
 
     def GeoConverter(self, postcode):
-    """takes postcode, passes it into the api and returns a list of 
-    longitude and latitude values"""
+    """
+    converts postcode into latitude and longitude
+
+    returns a list of longitude and latitude values
+
+    """
+
         api_call = requests.get('https://api.postcode.io/postcodes/{}'.format(postcode))
         if api_call['status'] != 200:
-            print "Error"
+            print "Error {}".format(api_call)
         elif api_call['status'] == 200:         
             result = api_call.json()['result']
             self.coor = [result['longitude'], result['latitude']]
             return self.coor
 
-    def Convert_to_geo(self, )
-
+    
 
 
 
@@ -79,6 +82,6 @@ for postcode in table['postcode'].tolist():
 # it writes to a new csv file with coordinates
 
 
-table.to_csv('../data/postcodes_final.csv', separator=',',header = True, 
+table.to_csv('data/postcodes_final.csv', separator=',',header = True, 
                         index = False, mode = 'wb', encoding = 'utf-8')
 """

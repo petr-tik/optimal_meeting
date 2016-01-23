@@ -1,0 +1,26 @@
+objects for the server-side app scripts:
+
+
+	event group
+
+
+	traveller 
+		belongs to/inherits from group
+			group id
+			time and date
+		own:
+			transport mode
+			office postcode
+			home postcodes
+
+		
+	travel calculator
+		engine chooser:
+			tfl
+			uber
+			gmaps
+
+		api requester
+			make a general one
+
+			
