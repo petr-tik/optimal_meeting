@@ -23,4 +23,55 @@ objects for the server-side app scripts:
 		api requester
 			make a general one
 
+
+
+
+
+we need separate functions to convert all postcodes to coordinates
+
+
+
+MVP requirements:
+	client
+		
+		webapp - mobile friendly
+		
+		input:
+			type of user
+				organiser
+				invited
+
+			type of meeting
+				i come to you for 2 - pro
+				you come to me for 2 - pro 
+
+
+				meet halfway for groups. friends
 			
+			organiser:
+				type of venue
+				time and date
+				transport mode
+
+			all invited:
+				transport mode
+ 				from postcode
+				to postcode
+
+		output:
+			meeting area
+			list of suitable venues
+
+
+			mock ups for web app
+
+
+	server
+
+
+
+
+
+plan:
+1. talk to potential users
+2. 

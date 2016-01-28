@@ -27,7 +27,7 @@ class Traveller(object):
 
         """
 
-    def __init__(self, name):
+    def __init__(self, name, start_postcode, finish_postcode, mode):
     
         self.start_postcode = start_postcode
         self.finish_postcode = finish_postcode
