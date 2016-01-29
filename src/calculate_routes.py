@@ -6,7 +6,7 @@ import search_space
 import pandas as pd
 import requests
 import numpy as np
-
+from credentials import Credentials
 
 table = pd.read_table('data/postcodes_final.csv', sep = ',', encoding = 'utf-8', index_col = 0)
 
@@ -43,10 +43,11 @@ Parsed JSON object
 	departure = table.loc[name, ['latitude', 'longitude']].tolist()
 	destination = [dest_lat, dest_long]
 	# tfl authentication details 
-	App_ID = 'c33e8e43'
-	Key = '9c1e8ae73df1b9424c8b285eb5bc81f8'
+	TfL_cred = Credentials.TfL()
+	App_ID = TfL_cred.App_ID
+	Key = TfL_cred.Key
 	# URL composition
-	URL = 'https://api.tfl.gov.uk/Journey/JourneyResults/{},{}/to/{},{}?nationalSearch=False&&&timeIs=Departing&&&&&&&&&&&&&alternativeCycle=False&alternativeWalking=False&applyHtmlMarkup=False&useMultiModalCall=False&app_id={}&app_key={}'.format(departure[0], departure[1], destination[0], destination[1], App_ID, Key)
+	URL = TfL_cred.URL.format(departure[0], departure[1], destination[0], destination[1], App_ID, Key)
 
 	r = requests.get(URL)
 	if r.status_code == 200:
