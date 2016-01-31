@@ -82,18 +82,8 @@ for longit in myrange(parameters['longitude']['lower_bound'], parameters['longit
 			res = calc_travel(name, latit, longit)
 			
 class Engine_chooser(object):
-	def __init__(self,  ):
-		iwl	pass
-
-class Tfl_calc(object):
-	def __init__(self, self.mode, ):
+	def __init__(self):
 		pass
-
-class
-
-
-class 
-
 
 class Event(object):
 """
@@ -114,11 +104,11 @@ Retuns:
 		self.date_time = #taken from the group page
 		self.num_people = #taken from the group page
 
-	def id(self):
-		return Event.id
 
-	def date_time(self):
-		return Event.date_time
 
-	def num_people(self):
-		return self.num_people
+
+class TfL_chat(object):
+	def __init__:
+		from src.credentials import Credentials
+		self.ID = Credentials.TfL.ID
+		self.Key = Credentials.TfL.Key

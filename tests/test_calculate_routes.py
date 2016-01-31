@@ -9,3 +9,6 @@ class Calcuator(unittest.TestCase):
 
 	def tearDown(self):
 		pass
+
+	def __init__(self):
+
