@@ -17,7 +17,7 @@ Features
 Installation
 ------------
 
-No need to install anything, follow [this link](http://petr-tik.github.io/optimal_meeting/login), log into a meeting group with your group id or create a new group. 
+No need to install anything, follow [this link](http://petr-tik.github.io/optimal_meeting), log into a meeting group with your group id or create a new group. 
 
 The organiser creates a group setting the date, time, keyword requirements (_pub_, _italian restaurant_, _club_). and number of people in the group. A group id number is created, which the organiser can then share with the group. Using this number people can log in and input their data. Each user submits their departure and home postcodes (easiest to turn into coordinates) and their preferred travel mode on the day of travel. 
 
